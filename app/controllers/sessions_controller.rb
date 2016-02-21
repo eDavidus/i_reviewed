@@ -12,9 +12,9 @@ class SessionsController < ApplicationController
   	if reviewer && reviewer.authenticate(password)
   		session[:reviewer_id] = reviewer.id
   		redirect_to root_path, notice: "Logged in successfully"
-	else
-		redirect_to login_path, alert: "Invalide username / password combination"
-	end
+  	else
+  		redirect_to login_path, alert: "Invalide username / password combination"
+  	end
   end
 
   def destroy
